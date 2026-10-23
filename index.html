@@ -54,61 +54,106 @@
     </div>
   </section>
 
-  <!-- 2. TABLE BOOKING SECTION (Photo2.jpg) -->
-  <section id="booking" class="py-28 max-w-7xl mx-auto px-6 lg:px-12 border-t border-[#E6DFD5]">
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-      <!-- Booking Image (Photo2.jpg) -->
-      <div class="lg:col-span-7 h-[80vh] rounded-3xl overflow-hidden shadow-2xl bg-[#E6DFD5]">
-        <img src="Photo2.jpg" alt="Dining Table Atmosphere" class="w-full h-full object-cover" />
+  <!-- Booking Form Card -->
+<div class="lg:col-span-5 bg-white p-8 sm:p-12 rounded-3xl border border-[#E6DFD5] shadow-lg">
+  <span class="text-xs uppercase tracking-widest font-semibold text-[#8C6D58] mb-2 block">Reservations</span>
+  <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#2C2A29] mb-6">Reserve a Table</h2>
+  
+  <form id="bookingForm" class="space-y-4 mb-6">
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Date</label>
+        <input type="date" id="date" name="date" required class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
       </div>
-
-      <!-- Booking Form Card -->
-      <div class="lg:col-span-5 bg-white p-8 sm:p-12 rounded-3xl border border-[#E6DFD5] shadow-lg">
-        <span class="text-xs uppercase tracking-widest font-semibold text-[#8C6D58] mb-2 block">Reservations</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-[#2C2A29] mb-6">Reserve a Table</h2>
-        
-        <form id="bookingForm" class="space-y-4 mb-6">
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Date</label>
-              <input type="date" id="date" name="date" required class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
-            </div>
-            <div>
-              <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Time</label>
-              <input type="time" id="time" name="time" required class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
-            </div>
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Number of Guests</label>
-            <select id="guests" name="guests" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]">
-              <option>1 Guest</option>
-              <option>2 Guests</option>
-              <option>3 - 4 Guests</option>
-              <option>5 - 8 Guests</option>
-              <option>8+ Guests</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required placeholder="04XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Specifics</label>
-            <input type="text" id="specifics" name="specifics" placeholder="Window seat, outdoor, high chair..." class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Dietary / Special Info</label>
-            <textarea id="dietary" name="dietary" rows="2" placeholder="Allergies, birthday celebration, dietary needs..." class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]"></textarea>
-          </div>
-          <button type="submit" id="submitBtn" class="w-full bg-[#8C6D58] hover:bg-[#725745] text-white py-4 rounded-xl font-medium transition-all shadow-md">Confirm Reservation Request</button>
-        </form>
+      <div>
+        <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Time</label>
+        <input type="time" id="time" name="time" required class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
       </div>
     </div>
-  </section>
+    <div>
+      <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
+    </div>
+    <div>
+      <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Number of Guests</label>
+      <select id="guests" name="guests" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]">
+        <option>1 Guest</option>
+        <option>2 Guests</option>
+        <option>3 - 4 Guests</option>
+        <option>5 - 8 Guests</option>
+        <option>8+ Guests</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="04XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
+    </div>
+    <div>
+      <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Specifics</label>
+      <input type="text" id="specifics" name="specifics" placeholder="Window seat, outdoor, high chair..." class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]" />
+    </div>
+    <div>
+      <label class="block text-xs font-semibold uppercase text-[#5A524C] mb-1">Dietary / Special Info</label>
+      <textarea id="dietary" name="dietary" rows="2" placeholder="Allergies, birthday celebration, dietary needs..." class="w-full px-4 py-3 rounded-xl border border-[#D8CFC4] text-sm focus:outline-none focus:border-[#8C6D58]"></textarea>
+    </div>
+    <button type="submit" id="submitBtn" class="w-full bg-[#8C6D58] hover:bg-[#725745] text-white py-4 rounded-xl font-medium transition-all shadow-md">Confirm Reservation Request</button>
+  </form>
+</div>
+
+<!-- 绑定提交事件与 JavaScript 逻辑 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwwFa8dQ4uIjGlIcbjg321SNTuUYRxoW8g0AwvcfiQ95xYLFgAGNekBupDIW35QQrOA/exec';
+    const form = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); // 关键：阻止原生表单刷新页面
+
+        // 按钮进入加载状态，防止重复点击
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = 'Submitting...';
+        }
+
+        // 打包表单数据发送给 Apps Script
+        fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors', // 允许跨域发送请求
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            date: document.getElementById('date').value,
+            time: document.getElementById('time').value,
+            name: document.getElementById('name').value,
+            guests: document.getElementById('guests').value,
+            phone: document.getElementById('phone').value,
+            specifics: document.getElementById('specifics') ? document.getElementById('specifics').value : '',
+            dietary: document.getElementById('dietary') ? document.getElementById('dietary').value : ''
+          })
+        })
+        .then(() => {
+          alert('Reservation submitted successfully!');
+          form.reset(); // 清空表单
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Confirm Reservation Request';
+          }
+        })
+        .catch(error => {
+          alert('Submission failed. Please try again or call us directly.');
+          console.error('Error!', error.message);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Confirm Reservation Request';
+          }
+        });
+      });
+    }
+  });
+</script>
 
   <!-- 3. CATERING SECTION (Photo3.jpg) -->
   <section id="catering" class="py-28 bg-[#EFE8DC] border-t border-[#E6DFD5]">
